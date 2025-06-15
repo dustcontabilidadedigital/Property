@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dust Contabilidade Digital | Contador Freelancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .hidden-language {
+            display: none;
+        }
+        .active-tab {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .section {
+            scroll-margin-top: 100px;
+        }
+        .brand-gradient {
+            background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 50%, #1e3a8a 100%);
+            background-size: 200% auto;
+            animation: gradient 3s linear infinite;
+        }
+        @keyframes gradient {
+            0% {background-position: 0% center;}
+            100% {background-position: 200% center;}
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Language Switch -->
+    <div class="language-switch">
+        <button id="ptBtn" class="px-4 py-2 rounded-l-lg border border-blue-500 active-tab">PT</button>
+        <button id="enBtn" class="px-4 py-2 rounded-r-lg border border-blue-500 bg-white text-blue-500">EN</button>
+    </div>
+
+    <!-- Portuguese Version -->
+    <div id="ptContent">
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-20">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="brand-gradient text-white px-4 py-2 rounded-lg inline-block mb-4">
+                        <h3 class="font-bold">dustcontabilidadedigital</h3>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Alisson David de Melo</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Contador Freelancer | Especialista em Contabilidade Internacional</h2>
+                    <p class="text-xl mb-8">Soluções contábeis precisas e personalizadas para clientes no Brasil e internacionalmente.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contato" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Entre em Contato</a>
+                        <a href="https://wa.me/5584981798573" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white p-1 rounded-full shadow-xl">
+                        <img src="/img/dustcontabilidadedigital.jpg" alt="Alisson Melo" 
+                        class="w-full h-full rounded-full object-cover max-w-[256px] max-h-[256px] md:max-w-[320px] md:max-h-[320px]">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="section py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Serviços Especializados</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">Soluções contábeis personalizadas para atender às necessidades específicas do seu negócio</p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Bookkeeping Internacional</h3>
+                        <p class="text-gray-600">Serviços completos de contabilidade para empresas nos EUA, incluindo reconciliação bancária, classificação de receitas/despesas e preparação de demonstrações financeiras.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-globe-americas text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Assessoria Fiscal Internacional</h3>
+                        <p class="text-gray-600">Consultoria especializada para brasileiros residentes no exterior, incluindo regularização fiscal, declaração de IR e orientação sobre transferências internacionais.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-building text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Contabilidade Empresarial</h3>
+                        <p class="text-gray-600">Fechamento contábil completo para empresas no Brasil, incluindo conciliação bancária, lançamento de folha de pagamento e transmissão de obrigações acessórias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projetos" class="section py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Projetos Recentes</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">Alguns dos trabalhos que realizei recentemente para clientes</p>
+                
+                <div class="space-y-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Bookkeeping para Empresas nos EUA</h3>
+                                <p class="text-gray-500 mb-4">Mar 2025 - Presente | Freelancer</p>
+                                <p class="text-gray-700 mb-4">
+                                    Gestão contábil completa para empresas americanas utilizando QuickBooks Online, garantindo conformidade com US GAAP.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Reconciliação bancária mensal e identificação/correção de discrepâncias</li>
+                                    <li>Classificação de receitas e despesas conforme regulamentação do IRS</li>
+                                    <li>Gestão contábil para 5+ empresas (LLCs, S-Corps e Corporations)</li>
+                                    <li>Preparação de demonstrações financeiras (Balanço, DRE e Fluxo de Caixa)</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">QuickBooks</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">US GAAP</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Reconciliação Bancária</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/bdg.png" alt="Bookkeeping" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Assessoria Fiscal para Brasileiro no Japão</h3>
+                                <p class="text-gray-500 mb-4">Fev 2025 - Mar 2025 | Freelancer</p>
+                                <p class="text-gray-700 mb-4">
+                                    Consultoria especializada para regularização da situação fiscal de cliente pessoa física residente no Japão.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Regularização de pendências fiscais</li>
+                                    <li>Elaboração e entrega da Declaração de Imposto de Renda</li>
+                                    <li>Orientação sobre transferências internacionais de valores</li>
+                                    <li>Esclarecimentos sobre saída fiscal e obrigações legais</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Assessoria Fiscal</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">IRPF</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Internacional</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/japan.png" alt="Assessoria Fiscal" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Fechamento Contábil para Empresas do Regime Simples</h3>
+                                <p class="text-gray-500 mb-4">Jan 2025 - Mar 2025 | Freelancer</p>
+                                <p class="text-gray-700 mb-4">
+                                    Fechamento contábil completo para seis empresas do Regime Simples e uma do Lucro Presumido.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Conciliação bancária e importação de extratos</li>
+                                    <li>Lançamento de folha de pagamento</li>
+                                    <li>Classificação contábil no sistema Domínio</li>
+                                    <li>Entrega dentro do prazo acordado (28/02/2025)</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Domínio Sistemas</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Regime Simples</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Conciliação Bancária</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/reconcile.jpg" alt="Fechamento Contábil" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="section py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <h2 class="text-3xl font-bold mb-6">Sobre Mim</h2>
+                        <p class="text-gray-700 mb-4">
+                            Sou contador certificado (CRC RN-014391/O) com mais de 8 anos de experiência em contabilidade nacional e internacional. 
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Especializado em rotinas contábeis e conhecimento do setor fiscal, trabalho principalmente com conciliações, fechamentos contábeis, preparação de balancetes e transmissão de obrigações acessórias.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Minha abordagem combina precisão técnica com uma compreensão profunda das necessidades específicas de cada cliente, garantindo soluções personalizadas e eficientes.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contato" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Contrate-me</a>
+                            <a href="https://linkedin.com/in/alisson-david95" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                            </a>
+                            <a href="https://www.facebook.com/dustcontabilidadedigital/" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-facebook-f mr-2"></i> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/dustcontabilidadedigital/" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-instagram mr-2"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-4">Minhas Habilidades</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-medium mb-2">Tecnologias</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">QuickBooks</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Domínio Sistemas</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">MS Office</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Excel Avançado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-medium mb-2">Áreas de Atuação</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Bookkeeping</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Contabilidade Internacional</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Assessoria Fiscal</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Perícia Contábil</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium mb-2">Idiomas</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Português (Nativo)</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Inglês (Avançado)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="section py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 gradient-bg text-white p-10">
+                            <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+                            <p class="mb-6">Estou disponível para novos projetos e oportunidades. Envie sua mensagem e retornarei o mais breve possível.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <p class="text-blue-100">Envie uma mensagem através do formulário</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">WhatsApp</h4>
+                                        <p class="text-blue-100">+55 84 98179 8573</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">LinkedIn</h4>
+                                        <p class="text-blue-100">in/alisson-david95</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 p-10">
+
+
+
+                            <!-- Mantenha a estrutura visual mas bloqueie qualquer interação -->
+<form class="space-y-4" id="fakeForm" onsubmit="return false">
+    <!-- Todos os campos DESABILITADOS -->
+    <div>
+        <label class="block text-gray-700 mb-1">Nome</label>
+        <input type="text" 
+               disabled 
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed"
+               value="Formulário Desativado">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Email</label>
+        <input type="email" 
+               disabled
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Assunto</label>
+        <input type="text" 
+               disabled
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Mensagem</label>
+        <textarea 
+            disabled
+            rows="4" 
+            class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed"></textarea>
+    </div>
+    
+    <!-- Botão DESABILITADO -->
+    <button 
+        type="button" 
+        disabled
+        class="w-full bg-gray-400 text-white px-6 py-3 rounded-lg font-medium cursor-not-allowed">
+        Formulário Desativado
+    </button>
+</form>
+
+<!-- CSS Adicional para melhorar a aparência -->
+<style>
+    /* Remove qualquer ação de foco */
+    #fakeForm input:focus, #fakeForm textarea:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #e5e7eb;
+    }
+    
+    /* Esconde elementos via CSS */
+    #fakeForm label {
+        user-select: none; /* Impede seleção de texto */
+        pointer-events: none; /* Remove interação */
+    }
+</style>
+
+<!-- JavaScript de Proteção Extra -->
+<script>
+    document.getElementById('fakeForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    });
+    
+    // Destrói qualquer funcionalidade residual
+    document.querySelectorAll('#fakeForm input, #fakeForm textarea').forEach(element => {
+        element.removeAttribute('name');
+        element.removeAttribute('id');
+        element.setAttribute('readonly', 'true');
+    });
+</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="brand-gradient text-white px-4 py-2 rounded-lg inline-block mb-2">
+                            <h3 class="font-bold">dustcontabilidadedigital</h3>
+                        </div>
+                        <p class="text-gray-400">Contador Freelancer | CRC RN-014391/O</p>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/alisson-david95" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5584981798573" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/dustcontabilidadedigital/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dustcontabilidadedigital/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                    <p>&copy; 2025 Dust Contabilidade Digital. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- English Version -->
+    <div id="enContent" class="hidden-language">
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-20">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="brand-gradient text-white px-4 py-2 rounded-lg inline-block mb-4">
+                        <h3 class="font-bold">dustcontabilidadedigital</h3>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Alisson David de Melo</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Freelance Accountant | International Accounting Specialist</h2>
+                    <p class="text-xl mb-8">Providing precise and customized accounting solutions for clients in Brazil and internationally.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Get in Touch</a>
+                        <a href="https://wa.me/5584981798573" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white p-1 rounded-full shadow-xl">
+                        <img src="/img/dustcontabilidadedigital.jpg" alt="Alisson Melo" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Specialized Services</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">Custom accounting solutions tailored to your business needs</p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">International Bookkeeping</h3>
+                        <p class="text-gray-600">Complete accounting services for US-based companies, including bank reconciliation, income/expense classification and financial statement preparation.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-globe-americas text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">International Tax Advisory</h3>
+                        <p class="text-gray-600">Specialized consulting for Brazilians living abroad, including tax regularization, income tax returns and guidance on international transfers.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl card-hover border border-gray-200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-building text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Corporate Accounting</h3>
+                        <p class="text-gray-600">Complete accounting closing for Brazilian companies, including bank reconciliation, payroll entries and transmission of ancillary obligations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Recent Projects</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">Some of the work I've done recently for clients</p>
+                
+                <div class="space-y-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Bookkeeping for US Companies</h3>
+                                <p class="text-gray-500 mb-4">Mar 2025 - Present | Freelance</p>
+                                <p class="text-gray-700 mb-4">
+                                    Complete accounting management for US companies using QuickBooks Online, ensuring compliance with US GAAP.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Monthly bank reconciliation and discrepancy identification/correction</li>
+                                    <li>Income and expense classification according to IRS regulations</li>
+                                    <li>Accounting management for 5+ companies (LLCs, S-Corps and Corporations)</li>
+                                    <li>Preparation of financial statements (Balance Sheet, P&L and Cash Flow)</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">QuickBooks</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">US GAAP</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bank Reconciliation</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/bdg.png" alt="Bookkeeping" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Tax Advisory for Brazilian in Japan</h3>
+                                <p class="text-gray-500 mb-4">Feb 2025 - Mar | Freelance</p>
+                                <p class="text-gray-700 mb-4">
+                                    Specialized consulting for tax regularization of an individual client residing in Japan.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Regularization of tax pending issues</li>
+                                    <li>Preparation and submission of Income Tax Return</li>
+                                    <li>Guidance on international money transfers</li>
+                                    <li>Clarifications on tax exit and legal obligations</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tax Advisory</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Income Tax</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">International</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/japan.png" alt="Tax Advisory" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-200">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/3 mb-6 md:mb-0">
+                                <h3 class="text-2xl font-semibold mb-2">Accounting Closing for Brazilian Companies</h3>
+                                <p class="text-gray-500 mb-4">Jan 2025 - Mar 2025 | Freelance</p>
+                                <p class="text-gray-700 mb-4">
+                                    Complete accounting closing for six companies under simplify and one under Presumed Profit regimes.
+                                </p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                                    <li>Bank reconciliation and statement imports</li>
+                                    <li>Payroll entries</li>
+                                    <li>Accounting classification in thomson reuters Dominio systems</li>
+                                    <li>Delivery within agreed deadline (02/28/2025)</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Dominio systems</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Simplified Regime</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bank Reconciliation</span>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex items-center justify-center">
+                                <img src="/img/reconcile.jpg" alt="Accounting Closing" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flexocol md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                        <p class="text-gray-700 mb-4">
+                            I'm a certified accountant (CRC RN-014391/O) with over 8 years of experience in domestic and international accounting.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Specialized in accounting routines and tax sector knowledge, I mainly work with reconciliations, accounting closings, trial balance preparation and transmission of ancillary obligations.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            My approach combines technical precision with a deep understanding of each client's specific needs, ensuring personalized and efficient solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Hire Me</a>
+                            <a href="https://linkedin.com/in/alisson-david95" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                            </a>
+                            <a href="https://www.facebook.com/dustcontabilidadedigital/" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-facebook-f mr-2"></i> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/dustcontabilidadedigital/" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300 flex items-center">
+                                <i class="fab fa-instagram mr-2"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-4">My Skills</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-medium mb-2">Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">QuickBooks</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Dominio systems</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">MS Office</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Advanced Excel</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-medium mb-2">Areas of Expertise</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Bookkeeping</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">International Accounting</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Tax Advisory</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Forensic Accounting</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium mb-2">Languages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Portuguese (Native)</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">English (Advanced)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 gradient-bg text-white p-10">
+                            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+                            <p class="mb-6">I'm available for new projects and opportunities. Send your message and I'll get back to you as soon as possible.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <p class="text-blue-100">Send a message through the form</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">WhatsApp</h4>
+                                        <p class="text-blue-100">+55 84 98179 8573</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white bg-opacity-20 p-2 rounded-full mr-4">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">LinkedIn</h4>
+                                        <p class="text-blue-100">in/alisson-david95</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 p-10">
+                            <!-- Mantenha a estrutura visual mas bloqueie qualquer interação -->
+<form class="space-y-4" id="fakeForm" onsubmit="return false">
+    <!-- Todos os campos DESABILITADOS -->
+    <div>
+        <label class="block text-gray-700 mb-1">Nome</label>
+        <input type="text" 
+               disabled 
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed"
+               value="Form disabled">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Email</label>
+        <input type="email" 
+               disabled
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Assunto</label>
+        <input type="text" 
+               disabled
+               class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+    </div>
+    
+    <div>
+        <label class="block text-gray-700 mb-1">Mensagem</label>
+        <textarea 
+            disabled
+            rows="4" 
+            class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed"></textarea>
+    </div>
+    
+    <!-- Botão DESABILITADO -->
+    <button 
+        type="button" 
+        disabled
+        class="w-full bg-gray-400 text-white px-6 py-3 rounded-lg font-medium cursor-not-allowed">
+        Form disabled
+    </button>
+</form>
+
+<!-- CSS Adicional para melhorar a aparência -->
+<style>
+    /* Remove qualquer ação de foco */
+    #fakeForm input:focus, #fakeForm textarea:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #e5e7eb;
+    }
+    
+    /* Esconde elementos via CSS */
+    #fakeForm label {
+        user-select: none; /* Impede seleção de texto */
+        pointer-events: none; /* Remove interação */
+    }
+</style>
+
+<!-- JavaScript de Proteção Extra -->
+<script>
+    document.getElementById('fakeForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    });
+    
+    // Destrói qualquer funcionalidade residual
+    document.querySelectorAll('#fakeForm input, #fakeForm textarea').forEach(element => {
+        element.removeAttribute('name');
+        element.removeAttribute('id');
+        element.setAttribute('readonly', 'true');
+    });
+</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="brand-gradient text-white px-4 py-2 rounded-lg inline-block mb-2">
+                            <h3 class="font-bold">dustcontabilidadedigital</h3>
+                        </div>
+                        <p class="text-gray-400">Freelance Accountant | CRC RN-014391/O</p>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/alisson-david95" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5584981798573" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/dustcontabilidadedigital/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dustcontabilidadedigital/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                    <p>&copy; 2025 Dust Contabilidade Digital. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Language switch functionality
+        document.getElementById('ptBtn').addEventListener('click', function() {
+            document.getElementById('ptContent').classList.remove('hidden-language');
+            document.getElementById('enContent').classList.add('hidden-language');
+            document.getElementById('ptBtn').classList.add('active-tab');
+            document.getElementById('enBtn').classList.remove('active-tab');
+            document.getElementById('enBtn').classList.add('bg-white', 'text-blue-500');
+            document.getElementById('ptBtn').classList.remove('bg-white', 'text-blue-500');
+        });
+        
+        document.getElementById('enBtn').addEventListener('click', function() {
+            document.getElementById('enContent').classList.remove('hidden-language');
+            document.getElementById('ptContent').classList.add('hidden-language');
+            document.getElementById('enBtn').classList.add('active-tab');
+            document.getElementById('ptBtn').classList.remove('active-tab');
+            document.getElementById('ptBtn').classList.add('bg-white', 'text-blue-500');
+            document.getElementById('enBtn').classList.remove('bg-white', 'text-blue-500');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=20fodememu/meu-site-de-contabilidade" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
