@@ -1537,172 +1537,288 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Left: Info -->
-                <div class="reveal">
-                    <div class="inline-flex items-center space-x-2 bg-brand-50 text-brand-600 rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                       <span data-i18n="contact_badge">Contato</span>
-                    </div>
-                   <h2 data-i18n="contact_title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                     Entre em contato</h2>
-                    <p data-i18n="contact_desc" class="text-gray-600 text-lg mb-8 leading-relaxed">Preencha o formulário ou entre em contato conosco diretamente. Responderemos em até 24 horas.</p>
-                    
-                    <div class="space-y-6 mb-10">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="mail" class="w-6 h-6 text-brand-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">E-mail</h4>
-                                <a href="mailto:contato@dustcontabilidadedigital.com.br" class="text-brand-600 hover:text-brand-700 transition">Enviar e-mail</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="message-circle" class="w-6 h-6 text-emerald-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">WhatsApp</h4>
-                                <a href="https://wa.me/5584981798573" class="text-brand-600 hover:text-brand-700 transition">+55 (84) 98179-8573 (Brasil)</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="clock" class="w-6 h-6 text-violet-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900" data-i18n="contact_hours_title">
-                                     Horário de Atendimento
-                                </h4>
+<!-- Contact Section -->
+<section id="contato" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+            
+            <!-- Left: Info -->
+            <div class="reveal">
+                <div class="inline-flex items-center space-x-2 bg-brand-50 text-brand-600 rounded-full px-4 py-2 text-sm font-semibold mb-4">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span data-i18n="contact_badge">Contato</span>
+                </div>
 
-                                    <p class="text-gray-600 text-sm" data-i18n="contact_hours_week">
-                                        Segunda a Sexta: 9h às 18h
-                                                </p>
+                <h2 data-i18n="contact_title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Entre em contato
+                </h2>
 
-<p class="text-gray-600 text-sm" data-i18n="contact_hours_sat">
-    Sábado: 9h às 12h
-</p>
-                            </div>
+                <p data-i18n="contact_desc" class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Preencha o formulário ou entre em contato conosco diretamente. Responderemos em até 24 horas.
+                </p>
+                
+                <div class="space-y-6 mb-10">
+
+                    <!-- Email -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6 text-brand-600"></i>
+                        </div>
+
+                        <div class="min-w-0">
+                            <h4 class="font-semibold text-gray-900" data-i18n="contact_email_title">
+                                E-mail
+                            </h4>
+
+                            <a 
+                                href="mailto:contato@dustcontabilidadedigital.com.br"
+                                class="text-brand-600 hover:text-brand-700 transition text-sm font-medium"
+                                aria-label="Enviar e-mail para contato@dustcontabilidadedigital.com.br"
+                            >
+                                <span class="sm:hidden" data-i18n="contact_email_link_mobile">
+                                    Enviar E-mail
+                                </span>
+
+                                <span class="hidden sm:inline break-all" data-i18n="contact_email_address">
+                                    Enviar E-mail
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div>
-                        <h4 class="font-semibold text-gray-900" data-i18n="contact_social_title">Siga-nos</h4>
-                        <div class="flex space-x-3">
-                            <a href="https://www.linkedin.com/in/alisson-accountant/" class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group">
-                                <i data-lucide="linkedin" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
+
+                    <!-- WhatsApp -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-emerald-600"></i>
+                        </div>
+
+                        <div class="min-w-0">
+                            <h4 class="font-semibold text-gray-900" data-i18n="contact_whatsapp_title">
+                                WhatsApp
+                            </h4>
+
+                            <a 
+                                href="https://wa.me/5584981798573"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-brand-600 hover:text-brand-700 transition text-sm font-medium break-words"
+                            >
+                                +55 (84) 98179-8573 (Brasil)
                             </a>
-                            <a href="https://www.facebook.com/dustcontabilidade" class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group">
-                                <i data-lucide="facebook" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
-                            </a>
-                            <a href="https://www.instagram.com/dustcontabilidade" class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group">
-                                <i data-lucide="instagram" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
-                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-6 h-6 text-violet-600"></i>
+                        </div>
+
+                        <div class="min-w-0">
+                            <h4 class="font-semibold text-gray-900" data-i18n="contact_hours_title">
+                                Horário de Atendimento
+                            </h4>
+
+                            <p class="text-gray-600 text-sm" data-i18n="contact_hours_week">
+                                Segunda a Sexta: 9h às 18h
+                            </p>
+
+                            <p class="text-gray-600 text-sm" data-i18n="contact_hours_sat">
+                                Sábado: 9h às 12h
+                            </p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right: Form -->
-                <div class="reveal">
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6" data-i18n="contact_form_title">Envie sua Mensagem</h3>
-                        
-                        <form id="contact-form" class="space-y-5">
-                            <div class="grid sm:grid-cols-2 gap-5">
-                                <div>
-                              <label for="name" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_name_label">Nome Completo *</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-gray-700 font-medium mb-2 text-sm">Email *</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
-                                </div>
-                            </div>
-                            
-                            <div class="grid sm:grid-cols-2 gap-5">
-                                <div>
-                                   <label for="phone" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_phone_label">Telefone</label>
-                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm" placeholder="(XX) XXXXX-XXXX">
-                                </div>
-                                <div>
-                                    <label for="company" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_company_label">Empresa</label>
-                                    <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
-                                </div>
-                            </div>
-                            
-                            <div>
-                              <label for="country" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_country_label">País de operação</label>
-                                <select id="country" name="country" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
-                                    <option value="" data-i18n="contact_select">Selecione</option>
-                                    <option value="brasil" data-i18n="contact_country_br">Brasil</option>
-                                    <option value="eua" data-i18n="contact_country_us">Estados Unidos</option>
-                                    <option value="ambos" data-i18n="contact_country_both">Ambos</option>
-                                </select>
-                            </div>
-                            
-                           <div>
-                         <label for="subject" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_subject_label">
-                         Assunto *
-                        </label>
+                <!-- Social -->
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3" data-i18n="contact_social_title">
+                        Siga-nos
+                    </h4>
 
-                        <select 
-                        id="subject" 
-                        name="subject" 
-                        required 
-                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
-                        <option value="" data-i18n="contact_subject_placeholder">Selecione um assunto</option>
+                    <div class="flex space-x-3">
+                        <a 
+                            href="https://www.linkedin.com/in/alisson-accountant/" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group"
+                            aria-label="LinkedIn"
+                        >
+                            <i data-lucide="linkedin" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
+                        </a>
 
-        <optgroup label="BR" data-i18n-label="contact_subject_group_br">
-            <option value="desenquadramento-mei" data-i18n="contact_subject_mei">Desenquadramento MEI</option>
-            <option value="alteracao-contratual" data-i18n="contact_subject_contract">Alteração Contratual</option>
-            <option value="baixa-empresa" data-i18n="contact_subject_closure">Baixa de Empresa</option>
-            <option value="escrituracao-contabil" data-i18n="contact_subject_accounting">Escrituração Contábil</option>
-            <option value="imposto-renda" data-i18n="contact_subject_tax_return">Imposto de Renda</option>
-            <option value="folha-pagamento" data-i18n="contact_subject_payroll_br">Folha de Pagamento</option>
-        </optgroup>
+                        <a 
+                            href="https://www.facebook.com/dustcontabilidade" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group"
+                            aria-label="Facebook"
+                        >
+                            <i data-lucide="facebook" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
+                        </a>
 
-        <optgroup label="U.S" data-i18n-label="contact_subject_group_us">
-            <option value="bookkeeping" data-i18n="contact_subject_bookkeeping">Bookkeeping</option>
-            <option value="tax-compliance" data-i18n="contact_subject_tax_compliance">Impostos e Compliance</option>
-            <option value="formacao-empresa-us" data-i18n="contact_subject_company_us">Formação de Empresa</option>
-            <option value="consultoria-financeira" data-i18n="contact_subject_consulting">Consultoria Financeira</option>
-        </optgroup>
-
-        <option value="outro" data-i18n="contact_subject_other">Outro</option>
-    </select>
-</div>
-                            
-                    <div>
-                    <label for="message" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_message_label">
-                    Mensagem *
-                    </label>
-
-                    <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4" 
-                    required 
-                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm" 
-                    placeholder="Conte-nos sobre seu negócio e como podemos ajudar..."
-                    ></textarea>
-                    </div>
-
-<button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-6 rounded-xl transition shadow-lg shadow-brand-600/25 hover:shadow-brand-600/40 flex items-center justify-center space-x-2">
-    <i data-lucide="send" class="w-5 h-5"></i>
-    <span data-i18n="contact_submit">Enviar Mensagem</span>
-</button>
-                            </button>
-                        </form>
+                        <a 
+                            href="https://www.instagram.com/dustcontabilidade" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-11 h-11 bg-gray-100 hover:bg-brand-50 rounded-xl flex items-center justify-center transition group"
+                            aria-label="Instagram"
+                        >
+                            <i data-lucide="instagram" class="w-5 h-5 text-gray-600 group-hover:text-brand-600 transition"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- Right: Form -->
+            <div class="reveal">
+                <div class="bg-gray-50 rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6" data-i18n="contact_form_title">
+                        Envie sua Mensagem
+                    </h3>
+
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_name_label">
+                                    Nome Completo *
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2 text-sm">
+                                    Email *
+                                </label>
+
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_phone_label">
+                                    Telefone
+                                </label>
+
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="(XX) XXXXX-XXXX"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="company" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_company_label">
+                                    Empresa
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    id="company" 
+                                    name="company"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="country" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_country_label">
+                                País de operação
+                            </label>
+
+                            <select 
+                                id="country" 
+                                name="country"
+                                class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                            >
+                                <option value="" data-i18n="contact_country_placeholder">Selecione</option>
+                                <option value="brasil" data-i18n="contact_country_br">Brasil</option>
+                                <option value="usa" data-i18n="contact_country_us">Estados Unidos</option>
+                                <option value="ambos" data-i18n="contact_country_both">Ambos</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_subject_label">
+                                Assunto *
+                            </label>
+
+                            <select 
+                                id="subject" 
+                                name="subject" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"
+                            >
+                                <option value="" data-i18n="contact_subject_placeholder">Selecione um assunto</option>
+
+                                <optgroup label="BR Contabilidade Brasileira">
+                                    <option value="desenquadramento-mei" data-i18n="contact_subject_mei">Desenquadramento MEI</option>
+                                    <option value="alteracao-contratual" data-i18n="contact_subject_contract">Alteração Contratual</option>
+                                    <option value="baixa-empresa" data-i18n="contact_subject_closure">Baixa de Empresa</option>
+                                    <option value="escrituracao-contabil" data-i18n="contact_subject_accounting">Escrituração Contábil</option>
+                                    <option value="imposto-renda" data-i18n="contact_subject_tax_return">Imposto de Renda</option>
+                                    <option value="folha-pagamento" data-i18n="contact_subject_payroll_br">Folha de Pagamento</option>
+                                </optgroup>
+
+                                <optgroup label="US Contabilidade Americana">
+                                    <option value="bookkeeping" data-i18n="contact_subject_bookkeeping">Bookkeeping</option>
+                                    <option value="tax-compliance" data-i18n="contact_subject_tax_compliance">Impostos e Compliance</option>
+                                    <option value="formacao-empresa-us" data-i18n="contact_subject_company_us">Formação de Empresa</option>
+                                    <option value="consultoria-financeira" data-i18n="contact_subject_consulting">Consultoria Financeira</option>
+                                </optgroup>
+
+                                <option value="outro" data-i18n="contact_subject_other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_message_label">
+                                Mensagem *
+                            </label>
+
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm resize-none"
+                                placeholder="Conte-nos sobre seu negócio e como podemos ajudar..."
+                                data-i18n-placeholder="contact_message_placeholder"
+                            ></textarea>
+                        </div>
+
+                        <button 
+                            type="submit"
+                            class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-6 rounded-xl transition shadow-lg shadow-brand-600/25 hover:shadow-brand-600/40 flex items-center justify-center space-x-2"
+                        >
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span data-i18n="contact_submit">Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+                
+               
     <!-- Footer -->
     <footer class="bg-dark-900 text-gray-400 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2310,6 +2426,10 @@
 
                     contact_subject_group_br: 'BR Brazilian Accounting',
                     contact_subject_group_us: 'US American Accounting',
+
+                    contact_email_title: 'E-mail',
+                    contact_email_link_mobile: 'Send email',
+                    contact_email_address: 'Send Message',
                 }
             };
 
