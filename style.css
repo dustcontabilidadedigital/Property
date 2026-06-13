@@ -1,52 +1,48 @@
-/* Reset básico */
-* {
+/* Base correta para o site */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Arial", sans-serif;
+    background: #ffffff;
+}
+
+/* Evita que imagens criem largura maior que a tela */
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+/* Garante que seções e containers não passem da tela */
+section,
+nav,
+footer,
+header,
+main {
     max-width: 100%;
     overflow-x: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Arial", sans-serif;
 }
 
-/* Garante que imagens nunca estourem a tela */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Evita que textos longos criem rolagem lateral */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-div {
-    overflow-wrap: break-word;
-}
-
-/* Correção específica para mobile */
+/* Correção específica do menu/topo no mobile */
 @media (max-width: 1023px) {
-    body {
-        padding: 0;
-    }
-
     .nav-blur {
-        background: #ffffff;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
     #mobile-nav {
@@ -57,21 +53,27 @@ div {
 
     .glass,
     .glass-card {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
     .float-slow,
     .float-med,
     .glow-pulse {
-        animation: none;
+        animation: none !important;
+    }
+
+    .hero-mesh {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }
 
-/* Correções para telas bem pequenas */
+/* Correções para celular pequeno */
 @media (max-width: 640px) {
-    section {
-        overflow-x: hidden;
+    body {
+        padding: 0 !important;
     }
 
     .state-badge {
@@ -81,10 +83,16 @@ div {
     .service-hover:hover,
     .testimonial-card:hover,
     .state-badge:hover {
-        transform: none;
+        transform: none !important;
     }
 
-    .hero-mesh h1 {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span,
+    a {
         overflow-wrap: break-word;
     }
 }
