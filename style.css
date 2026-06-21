@@ -131,8 +131,35 @@ main {
     }
 }
 
-/* Textos justificados do site */
-.about-description,
-.hero-description {
+/* Texto justificado da seção Sobre */
+.about-description {
     text-align: justify;
+}
+
+/* Texto justificado da seção Hero / início da página */
+.hero-description {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+/* Garante o alinhamento justificado no mobile */
+@media (max-width: 640px) {
+    .hero-description {
+        text-align: justify !important;
+        text-align-last: left;
+    }
+}
+
+/* Texto justificado da seção inicial */
+.hero-description {
+    text-align: justify !important;
+    text-align-last: left;
+    
+}
+
+@media (max-width: 640px) {
+    .hero-description {
+        text-align: justify !important;
+        text-align-last: left;
+    }
 }
