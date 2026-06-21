@@ -14,11 +14,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Quando o navegador suportar, clip é mais rígido contra overflow lateral */
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Arial", sans-serif;
     background: #ffffff;
+    position: relative;
+    overscroll-behavior-x: none;
 }
-
 /* Evita que imagens criem largura maior que a tela */
 img,
 svg,
@@ -95,4 +104,33 @@ main {
     a {
         overflow-wrap: break-word;
     }
+}
+
+/* Trava final contra micro-overflow no mobile */
+@media (max-width: 640px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    @supports (overflow: clip) {
+        html,
+        body {
+            overflow-x: clip;
+        }
+    }
+
+    .hero-mesh,
+    .hero-mesh > div,
+    .hero-mesh .relative {
+        max-width: 100%;
+    }
+
+    .hero-mesh .absolute {
+        max-width: calc(100vw - 16px);
+    }
+}
+
+.about-description {
+    text-align: justify;
 }
