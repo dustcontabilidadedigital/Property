@@ -239,6 +239,107 @@
             opacity: 1;
             visibility: visible;
         }
+
+        .scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ======================================
+   AJUSTES DE ALINHAMENTO PERSONALIZADOS
+   ====================================== */
+
+
+/* HERO - descrição justificada */
+#home .hero-description {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+
+/* HERO - centralizar título e elementos principais no mobile/tablet */
+@media (max-width: 1023px) {
+    #home h1 {
+        text-align: center !important;
+    }
+
+    #home > div > div > div:first-child {
+        text-align: center !important;
+    }
+
+    #home .hero-description {
+        text-align: justify !important;
+        text-align-last: left;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #home [data-i18n="hero_time"] {
+        text-align: center !important;
+    }
+
+    #home a {
+        text-align: center !important;
+    }
+
+    #home .flex.flex-wrap {
+        justify-content: center !important;
+    }
+}
+
+
+/* SERVIÇOS - centralizar ícones dos cards */
+#servicos .service-icon {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* SERVIÇOS - centralizar títulos dos cards */
+#servicos .service-hover h4 {
+    text-align: center !important;
+}
+
+
+/* SERVIÇOS - justificar textos descritivos dos cards */
+#servicos .service-hover p {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+
+/* SERVIÇOS - centralizar palavras-chave/tags dos cards */
+#servicos .service-hover .flex.flex-wrap {
+    justify-content: center !important;
+}
+
+
+/* SERVIÇOS - centralizar títulos Contabilidade Brasileira e Americana */
+#servicos h3 {
+    text-align: center !important;
+}
+
+#servicos .flex.items-center.space-x-3 {
+    justify-content: center !important;
+}
+
+
+/* PROCESSO DE TRABALHO - justificar textos das etapas */
+p[data-i18n="process_step1_desc"],
+p[data-i18n="process_step2_desc"],
+p[data-i18n="process_step3_desc"],
+p[data-i18n="process_step4_desc"] {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+
+/* DEPOIMENTOS - justificar textos */
+.testimonial-card p {
+    text-align: justify !important;
+    text-align-last: left;
+}
         
         
     </style>
