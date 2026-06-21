@@ -238,3 +238,30 @@ p[data-i18n="process_step4_desc"] {
     text-align: justify !important;
     text-align-last: left;
 }
+
+/* SOBRE - centralizar bloco no mobile/tablet */
+@media (max-width: 1023px) {
+    #sobre .about-text {
+        text-align: center !important;
+    }
+
+    #sobre .about-text .inline-flex {
+        display: inline-flex !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #sobre .about-text h2 {
+        text-align: center !important;
+    }
+
+    #sobre .about-text h2 span {
+        display: block;
+    }
+
+    #sobre .about-description,
+    #sobre [data-i18n="about_desc"] {
+        text-align: justify !important;
+        text-align-last: left;
+    }
+}
