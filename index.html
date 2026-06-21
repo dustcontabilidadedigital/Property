@@ -369,6 +369,34 @@ p[data-i18n="process_step4_desc"] {
     }
 }
         
+/* FAQ - respostas justificadas em mobile e desktop */
+#faq .faq-answer {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+/* FAQ - títulos centralizados apenas no mobile/tablet */
+@media (max-width: 1023px) {
+    #faq .faq-toggle {
+        position: relative;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    #faq .faq-toggle h3 {
+        width: 100%;
+        text-align: center !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    #faq .faq-toggle .faq-icon {
+        position: absolute;
+        right: 1.25rem;
+    }
+}
+
+
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
