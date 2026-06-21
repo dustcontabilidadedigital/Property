@@ -131,6 +131,8 @@ main {
     }
 }
 
-.about-description {
+/* Textos justificados do site */
+.about-description,
+.hero-description {
     text-align: justify;
 }
