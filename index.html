@@ -397,6 +397,67 @@ p[data-i18n="process_step4_desc"] {
 }
 
 
+/* CONTATO - centralizar informações apenas no mobile/tablet */
+@media (max-width: 1023px) {
+    /* Bloco esquerdo da seção contato */
+    #contato .grid > .reveal:first-child {
+        text-align: center !important;
+    }
+
+    /* Selo "Contato" com ícone da cartinha */
+    #contato .grid > .reveal:first-child > .inline-flex {
+        display: inline-flex !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Título "Entre em contato" */
+    #contato h2[data-i18n="contact_title"] {
+        text-align: center !important;
+    }
+
+    /* Frase abaixo do título */
+    #contato p[data-i18n="contact_desc"] {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Linhas dos dados: e-mail, WhatsApp, localização e horário */
+    #contato .space-y-6 > .flex.items-start {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Remove o espaçamento lateral do space-x-4 quando vira coluna */
+    #contato .space-y-6 > .flex.items-start > * + * {
+        margin-left: 0 !important;
+    }
+
+    /* Centraliza textos internos dos dados */
+    #contato .space-y-6 h4,
+    #contato .space-y-6 p,
+    #contato .space-y-6 a {
+        text-align: center !important;
+    }
+
+    /* Evita que e-mail grande quebre o layout */
+    #contato .space-y-6 a {
+        word-break: break-word;
+    }
+
+    /* Título "Siga-nos" */
+    #contato h4[data-i18n="contact_social_title"] {
+        text-align: center !important;
+    }
+
+    /* Ícones das redes sociais */
+    #contato h4[data-i18n="contact_social_title"] + .flex {
+        justify-content: center !important;
+    }
+}
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
