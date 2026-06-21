@@ -341,6 +341,33 @@ p[data-i18n="process_step4_desc"] {
     text-align-last: left;
 }
         
+
+/* SOBRE - centralizar título no mobile/tablet */
+@media (max-width: 1023px) {
+    #sobre h2 {
+        text-align: center !important;
+    }
+
+    #sobre h2 span {
+        display: block;
+    }
+}
+
+/* SOBRE - centralizar título e selo no mobile/tablet */
+@media (max-width: 1023px) {
+    #sobre h2 {
+        text-align: center !important;
+    }
+
+    #sobre h2 span {
+        display: block;
+    }
+
+    #sobre .inline-flex {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
         
     </style>
 </head>
@@ -686,7 +713,7 @@ p[data-i18n="process_step4_desc"] {
                             <i data-lucide="calculator" class="w-7 h-7 text-brand-600"></i>
                         </div>
                         <h4 class="text-lg font-bold text-gray-900 mb-3" data-i18n="br_svc4_title">Escrituração Contábil</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="br_svc4_desc">Escrituração completa com SPED, EFD-ICMS/IPI, EFD-Receita, ECD e todas as obrigações acessórias.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="br_svc4_desc">Escrituração completa com SPED, EFD-ICMS/IPI, EFD-Contribuições, ECD e todas as obrigações acessórias.</p>
                         <div class="flex flex-wrap gap-2">
                         <span class="text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full font-medium" data-i18n="br_svc4_tag1">SPED</span>
                         <span class="text-xs bg-cyan-50 text-cyan-700 px-2.5 py-1 rounded-full font-medium" data-i18n="br_svc4_tag2">ECD</span>
@@ -863,13 +890,13 @@ p[data-i18n="process_step4_desc"] {
                 </div>
                 
                 <!-- Texto -->
-                <div class="reveal order-1 lg:order-2">
-                    <div class="inline-flex items-center space-x-2 bg-brand-50 text-brand-600 rounded-full px-4 py-2 text-sm font-semibold mb-4">
+               <div class="reveal order-1 lg:order-2 about-text">
+                    <div class="flex w-fit mx-auto lg:mx-0 items-center space-x-2 bg-brand-50 text-brand-600 rounded-full px-4 py-2 text-sm font-semibold mb-4">
                         <i data-lucide="star" class="w-4 h-4"></i>
                       <span data-i18n="about_badge">Sobre Nós</span>
                     </div>
                     
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center lg:text-left">
                     <span data-i18n="about_title">Especialistas em contabilidade</span>
                     <span class="text-brand-600" data-i18n="about_title_highlight">dos dois lados</span></h2>
                     
