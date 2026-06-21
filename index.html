@@ -1966,8 +1966,8 @@ p[data-i18n="process_step4_desc"] {
                     <h3 class="text-2xl font-bold text-gray-900 mb-6" data-i18n="contact_form_title">
                         Envie sua Mensagem
                     </h3>
-
-                    <form id="contact-form" class="space-y-5">
+                       <form id="contact-form" class="space-y-5">
+                   
                         <div class="grid md:grid-cols-2 gap-5">
                             <div>
                                 <label for="name" class="block text-gray-700 font-medium mb-2 text-sm" data-i18n="contact_name_label">
@@ -2249,7 +2249,7 @@ p[data-i18n="process_step4_desc"] {
         Receba dicas e atualizações sobre contabilidade no Brasil e EUA.
     </p>
 
-    <form class="flex flex-col sm:flex-row gap-2">
+    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
         <input 
             type="email" 
             placeholder="e-mail"
@@ -2265,6 +2265,7 @@ p[data-i18n="process_step4_desc"] {
         </button>
     </form>
 </div>
+
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/5584981798573" target="_blank" class="fixed bottom-6 left-6 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-xl flex items-center justify-center transition z-40 hover:scale-110">
@@ -2954,17 +2955,42 @@ p[data-i18n="process_step4_desc"] {
         const statsSection = document.querySelector('.cta-gradient');
         if (statsSection) statsObserver.observe(statsSection);
         
-        // Form submission
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const lang = localStorage.getItem('dust-lang') || 'pt';
-                const msg = lang === 'en' ? 'Thank you for your message! We will contact you shortly.' : 'Obrigado por sua mensagem! Entraremos em contato em breve.';
-                alert(msg);
-                contactForm.reset();
-            });
-        }
-    </script>
+     // Form submission
 
+// Formulário de contato desativado
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const lang = localStorage.getItem('dust-lang') || 'pt';
+
+        const msg = lang === 'en'
+            ? 'This form is currently disabled. Please contact us by WhatsApp or phone.'
+            : 'Este formulário está temporariamente desativado. Entre em contato pelo WhatsApp ou telefone.';
+
+        alert(msg);
+    });
+}
+
+// Newsletter desativada
+const newsletterForm = document.getElementById('newsletter-form');
+
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const lang = localStorage.getItem('dust-lang') || 'pt';
+
+        const msg = lang === 'en'
+            ? 'Newsletter subscription is currently disabled.'
+            : 'A inscrição na newsletter está temporariamente desativada.';
+
+        alert(msg);
+    });
+}
+
+    </script>
+</body>
 </html>
