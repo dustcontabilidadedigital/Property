@@ -136,30 +136,105 @@ main {
     text-align: justify;
 }
 
-/* Texto justificado da seção Hero / início da página */
+/* ================================
+   ALINHAMENTOS FINAIS DO SITE
+   ================================ */
+
+
+/* HERO - descrição sempre justificada */
 .hero-description {
     text-align: justify !important;
     text-align-last: left;
 }
 
-/* Garante o alinhamento justificado no mobile */
-@media (max-width: 640px) {
-    .hero-description {
+
+/* HERO - centralizar parte principal no mobile/tablet */
+@media (max-width: 1023px) {
+    #home .text-white {
+        text-align: center !important;
+    }
+
+    #home h1 {
+        text-align: center !important;
+    }
+
+    #home .hero-description {
         text-align: justify !important;
         text-align-last: left;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #home [data-i18n="hero_time"] {
+        text-align: center !important;
+    }
+
+    #home .flex.flex-col.sm\:flex-row {
+        align-items: center !important;
+    }
+
+    #home .flex.flex-wrap.gap-6 {
+        justify-content: center !important;
     }
 }
 
-/* Texto justificado da seção inicial */
-.hero-description {
+
+/* SERVIÇOS - centralizar conteúdo visual dos cards */
+#servicos .service-hover {
+    text-align: center !important;
+}
+
+
+/* SERVIÇOS - centralizar ícones */
+#servicos .service-icon {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* SERVIÇOS - centralizar títulos dos cards */
+#servicos .service-hover h4 {
+    text-align: center !important;
+}
+
+
+/* SERVIÇOS - justificar descrição dos cards */
+#servicos .service-hover p {
     text-align: justify !important;
     text-align-last: left;
-    
 }
 
-@media (max-width: 640px) {
-    .hero-description {
-        text-align: justify !important;
-        text-align-last: left;
+
+/* SERVIÇOS - centralizar palavras-chave/tags */
+#servicos .service-hover .flex.flex-wrap {
+    justify-content: center !important;
+}
+
+
+/* SERVIÇOS - centralizar títulos Brasil e EUA no mobile/tablet */
+@media (max-width: 1023px) {
+    #servicos h3 {
+        text-align: center !important;
     }
+
+    #servicos .flex.items-center.space-x-3 {
+        justify-content: center !important;
+    }
+}
+
+
+/* PROCESSO DE TRABALHO - justificar textos das etapas */
+p[data-i18n="process_step1_desc"],
+p[data-i18n="process_step2_desc"],
+p[data-i18n="process_step3_desc"],
+p[data-i18n="process_step4_desc"] {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+
+/* DEPOIMENTOS - justificar textos */
+.testimonial-card p {
+    text-align: justify !important;
+    text-align-last: left;
 }
