@@ -458,6 +458,77 @@ p[data-i18n="process_step4_desc"] {
         justify-content: center !important;
     }
 }
+
+/* RODAPÉ - centralizar tudo apenas no mobile/tablet */
+@media (max-width: 1023px) {
+    footer {
+        text-align: center !important;
+    }
+
+    footer h3,
+    footer h4,
+    footer p,
+    footer a,
+    footer span,
+    footer li {
+        text-align: center !important;
+    }
+
+    /* Centraliza logo/imagem do rodapé */
+    footer img,
+    footer .logo-img-footer {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Centraliza listas do rodapé */
+    footer ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding-left: 0 !important;
+    }
+
+    footer li {
+        width: 100%;
+    }
+
+    /* Centraliza links */
+    footer a {
+        justify-content: center !important;
+    }
+
+    /* Centraliza blocos flexíveis gerais */
+    footer .flex {
+        justify-content: center !important;
+    }
+
+    /* Para linhas com ícone + texto, deixa tudo centralizado */
+    footer .flex.items-start,
+    footer .flex.items-center {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Remove espaçamentos laterais criados por space-x no mobile */
+    footer .space-x-2 > * + *,
+    footer .space-x-3 > * + *,
+    footer .space-x-4 > * + * {
+        margin-left: 0.5rem !important;
+    }
+
+    /* Parte inferior do rodapé, copyright e links finais */
+    footer .border-t {
+        text-align: center !important;
+    }
+
+    footer .border-t > div {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+}
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
