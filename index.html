@@ -529,6 +529,113 @@ p[data-i18n="process_step4_desc"] {
         gap: 1rem !important;
     }
 }
+
+/* ======================================
+   MODO ESCURO - TESTE LIMPO
+   ====================================== */
+
+html.dark-mode body {
+    background: #0a0f1c !important;
+    color: #e5e7eb !important;
+}
+
+html.dark-mode .bg-white,
+html.dark-mode .bg-gray-50,
+html.dark-mode section.bg-white,
+html.dark-mode section.bg-gray-50 {
+    background-color: #0f172a !important;
+}
+
+html.dark-mode .text-gray-900,
+html.dark-mode .text-gray-800,
+html.dark-mode .text-gray-700 {
+    color: #f9fafb !important;
+}
+
+html.dark-mode .text-gray-600,
+html.dark-mode .text-gray-500 {
+    color: #cbd5e1 !important;
+}
+
+html.dark-mode .service-hover,
+html.dark-mode .testimonial-card,
+html.dark-mode .glass-card,
+html.dark-mode .state-badge {
+    background-color: #111827 !important;
+    border-color: #334155 !important;
+}
+
+html.dark-mode input,
+html.dark-mode select,
+html.dark-mode textarea {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    border-color: #334155 !important;
+}
+
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+html.dark-mode .nav-blur {
+    background: rgba(10, 15, 28, 0.92) !important;
+}
+
+html.dark-mode #navbar a,
+html.dark-mode #navbar span,
+html.dark-mode #navbar button {
+    color: #f9fafb !important;
+}
+
+/* mantém o Hero como está */
+html.dark-mode #home {
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(6,182,212,0.2) 0%, transparent 50%),
+        linear-gradient(135deg, #0a0f1c 0%, #111827 50%, #0a0f1c 100%) !important;
+}
+
+/* botão branco do Hero continua branco */
+html.dark-mode #home a.bg-white {
+    background-color: #ffffff !important;
+    color: #1e3a8a !important;
+}
+
+/* botão do modo escuro */
+#theme-toggle {
+    position: fixed;
+    left: 20px;
+    top: 96px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: #111827;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+html.dark-mode #theme-toggle {
+    background: #ffffff;
+    color: #111827;
+}
+
+@media (max-width: 640px) {
+    #theme-toggle {
+        left: 14px;
+        top: 82px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+}
+
+
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -2992,5 +3099,53 @@ if (newsletterForm) {
 }
 
     </script>
+
+   <button id="theme-toggle" type="button" aria-label="Alternar modo escuro">
+    🌙
+</button>
+
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.textContent = '☀️';
+            }
+        } else {
+            document.documentElement.classList.remove('dark-mode');
+            document.body.classList.remove('dark-mode');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.textContent = '🌙';
+            }
+        }
+    }
+
+    const savedTheme = localStorage.getItem('dust-theme');
+
+    if (savedTheme === 'dark') {
+        applyTheme('dark');
+    } else {
+        applyTheme('light');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+            const isDark = document.documentElement.classList.contains('dark-mode');
+
+            if (isDark) {
+                localStorage.setItem('dust-theme', 'light');
+                applyTheme('light');
+            } else {
+                localStorage.setItem('dust-theme', 'dark');
+                applyTheme('dark');
+            }
+        });
+    }
+</script>
 </body>
 </html>
