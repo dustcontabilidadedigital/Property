@@ -271,6 +271,23 @@ h3,
     text-align-last: left;
 }
 
+/* HERO - corrigir espaço vazio ao usar "visualizar desktop" no celular */
+@media (min-width: 700px) and (max-width: 1023px) and (orientation: portrait) {
+    #home {
+        min-height: auto !important;
+        align-items: flex-start !important;
+    }
+
+    #home > div {
+        padding-top: 5.5rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    #home .grid {
+        gap: 2rem !important;
+    }
+}
+
 
 /* HERO - centralizar título e elementos principais no mobile/tablet */
 @media (max-width: 1023px) {
