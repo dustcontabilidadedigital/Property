@@ -684,21 +684,178 @@ html.dark-mode #theme-toggle {
     }
 }
 
-/* HERO - descrição justificada */
-#home .hero-description {
-    text-align: justify !important;
-    text-align-last: left;
-}
 
-/* HERO - corrigir altura exagerada em modo desktop no celular/tablet */
-@media (min-width: 1024px) and (max-height: 850px) {
-    #home {
-        min-height: auto !important;
+
+/* HERO - centralizar título e descrição também no desktop */
+@media (min-width: 1024px) {
+    #home > div > div > div:first-child {
+        text-align: center !important;
     }
 
-    #home > div {
-        padding-top: 7rem !important;
-        padding-bottom: 4rem !important;
+    #home h1 {
+        text-align: center !important;
+    }
+
+    #home .hero-description {
+        text-align: center !important;
+        text-align-last: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* HERO - azul institucional com detalhe discreto Brasil/EUA */
+.hero-br-accent,
+.hero-us-accent {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.hero-br-accent::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #22c55e 0%, #facc15 55%, #38bdf8 100%);
+    opacity: 0.55;
+}
+
+.hero-us-accent::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3b82f6 0%, #f8fafc 50%, #ef4444 100%);
+    opacity: 0.55;
+}
+
+
+/* HERO - descrição sempre justificada */
+#home .hero-description {
+    text-align: justify !important;
+    text-align-last: left !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* HERO - no desktop, centraliza só o título */
+@media (min-width: 1024px) {
+    #home h1 {
+        text-align: center !important;
+    }
+
+    #home .hero-description {
+        text-align: justify !important;
+        text-align-last: left !important;
+    }
+}
+
+/* HERO - azul institucional com detalhe discreto Brasil/EUA */
+.hero-br-accent,
+.hero-us-accent {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+/* Linha Brasil */
+.hero-br-accent::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #22c55e 0%, #facc15 55%, #38bdf8 100%);
+    opacity: 0.45;
+}
+
+/* Linha EUA */
+.hero-us-accent::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3b82f6 0%, #f8fafc 50%, #ef4444 100%);
+    opacity: 0.45;
+}
+
+/* Luz passando nas linhas */
+.hero-br-accent::before,
+.hero-us-accent::before {
+    content: "";
+    position: absolute;
+    left: 8%;
+    bottom: -6px;
+    width: 26%;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.25) 45%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.25) 55%,
+        transparent 100%
+    );
+    opacity: 0.65;
+    filter: blur(0.3px);
+    animation: heroUnderlineGlow 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+.hero-us-accent::before {
+    animation-delay: 1.2s;
+}
+
+@keyframes heroUnderlineGlow {
+    0% {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    80% {
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: translateX(330%);
+        opacity: 0;
+    }
+}
+
+/* Evita animação para quem usa acessibilidade/redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+    .hero-br-accent::before,
+    .hero-us-accent::before {
+        animation: none !important;
+        opacity: 0 !important;
     }
 }
 
@@ -781,8 +938,11 @@ html.dark-mode #theme-toggle {
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    <span data-i18n="hero_title_0">Contabilidade</span> <span data-i18n="hero_title_1" class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">Brasileira</span> <span data-i18n="hero_title_2" class="text-white">e</span> <span data-i18n="hero_title_3" class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Americana</span>
-                    </h1>
+    <span data-i18n="hero_title_0">Contabilidade</span> 
+    <span data-i18n="hero_title_1" class="hero-br-accent">Brasileira</span> 
+    <span data-i18n="hero_title_2" class="text-white">&amp;</span> 
+    <span data-i18n="hero_title_3" class="hero-us-accent">Americana</span>
+    </h1>
                     
                     <p data-i18n="hero_desc" class="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed text-justify hero-description">
                      Oferecemos soluções em contabilidade, bookkeeping, imposto de renda, compliance fiscal e regularização paralegal para brasileiros e estrangeiros com interesses e negócios no Brasil e nos Estados Unidos.
