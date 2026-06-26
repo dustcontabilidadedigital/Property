@@ -655,6 +655,36 @@ html.dark-mode #theme-toggle {
 }
 
 
+/* HERO - corrigir altura exagerada em modo desktop no celular/tablet */
+@media (min-width: 1024px) and (max-height: 850px) {
+    #home {
+        min-height: auto !important;
+    }
+
+    #home > div {
+        padding-top: 7rem !important;
+        padding-bottom: 4rem !important;
+    }
+}
+
+/* HERO - descrição justificada */
+#home .hero-description {
+    text-align: justify !important;
+    text-align-last: left;
+}
+
+/* HERO - corrigir altura exagerada em modo desktop no celular/tablet */
+@media (min-width: 1024px) and (max-height: 850px) {
+    #home {
+        min-height: auto !important;
+    }
+
+    #home > div {
+        padding-top: 7rem !important;
+        padding-bottom: 4rem !important;
+    }
+}
+
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
