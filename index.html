@@ -66,10 +66,24 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap');
         
         * { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
+
+        /* Fonte institucional para títulos */
+h1,
+h2,
+h3,
+#home h1,
+#sobre h2,
+#servicos h2,
+#planos h2,
+#faq h2,
+#contato h2 {
+    font-family: 'Libre Baskerville', serif !important;
+    letter-spacing: -0.03em;
+}
         
         /* Glassmorphism */
         .glass {
@@ -635,6 +649,11 @@ html.dark-mode #theme-toggle {
     }
 }
 
+/* PLANOS - centralizar títulos dos cards */
+#planos .grid > div h3 {
+    text-align: center !important;
+}
+
 
     </style>
 </head>
@@ -646,9 +665,10 @@ html.dark-mode #theme-toggle {
             <div class="flex justify-between items-center h-16 lg:h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex items-center group">
-                    <span class="text-xl font-bold text-gray-900 group-hover:text-brand-600 transition">Dust</span>
-                    <span class="text-xl font-light text-gray-500"> Contabilidade</span>
-                </a>
+    <a href="#home" class="flex items-center group">
+    <span class="text-xl font-bold text-gray-900 group-hover:text-brand-600 transition">Dust</span>
+    <span class="text-xl font-light text-gray-500 ml-1" data-i18n="nav_brand_suffix">Contabilidade</span>
+</a>
                 
                 <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-8">
@@ -2379,6 +2399,43 @@ html.dark-mode #theme-toggle {
             Assinar
         </button>
     </form>
+
+
+<!-- Google Business - visível apenas no desktop -->
+<div class="hidden lg:block mt-8 bg-dark-800/60 border border-dark-700 rounded-2xl p-5">
+    <div class="flex items-start space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="map-pin" class="w-5 h-5 text-brand-400"></i>
+        </div>
+
+        <div>
+            <h5 class="text-white font-bold text-sm mb-1">
+                DUST CONTABILIDADE DIGITAL
+            </h5>
+
+           <p class="text-gray-400 text-xs leading-relaxed mb-3" data-i18n="google_business_desc">
+    Perfil empresarial no Google, atendimento digital e informações comerciais da empresa.
+</p>
+
+            <p class="text-gray-500 text-xs mb-3">
+                CNPJ: 64.965.127/0001-28
+            </p>
+
+            <a 
+                href="https://share.google/IVrzoq2yG4bgqfpNN"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-brand-400 hover:text-brand-300 text-xs font-semibold transition"
+            >
+                <span data-i18n="google_business_link">Ver perfil no Google</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
 </div>
 
 
@@ -2840,6 +2897,10 @@ html.dark-mode #theme-toggle {
                     contact_whatsapp_title: 'WhatsApp',
                     contact_whatsapp_number: '+55 (84) 98179-8573 (Brazil)',
 
+                    google_business_desc: 'Business profile on Google, digital support, and company information.',
+                    google_business_link: 'View Google profile',
+                    
+                    nav_brand_suffix: ' Accounting',
                     
                 }
             };
